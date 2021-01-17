@@ -1,0 +1,65 @@
+[SPLASH] Benchmarks to run: barnes
+
+[SPLASH] [========== Running benchmark barnes ==========]
+[SPLASH] Setting up run directory: /tmp/tmp69tuZ3
+[SPLASH] Running 'SNIPER_APP_LD_PRELOAD=$LD_PRELOAD; unset LD_PRELOAD; /home/radu/sniper/run-sniper -n 4 -m 'localhost' -d '/home/radu/sniper/benchmarks/runz/cores_4/barnes' -c gainestown --power --roi --curdir=/home/radu/sniper/benchmarks  --  /home/radu/sniper/benchmarks/splash2/splash2/codes/apps/barnes/BARNES < input':
+[SPLASH] [---------- Beginning of output ----------]
+[SNIPER] Start
+[SNIPER] --------------------------------------------------------------------------------
+[SNIPER] Sniper using SIFT/trace-driven frontend
+[SNIPER] Running pre-ROI region in  CACHE_ONLY mode
+[SNIPER] Running application ROI in DETAILED mode
+[SNIPER] Running post-ROI region in FAST_FORWARD mode
+[SNIPER] --------------------------------------------------------------------------------
+
+		Hack code: Plummer model
+
+     nbody     dtime       eps       tol     dtout     tstop    fcells     NPROC
+     16384   0.02500    0.0500      1.00     0.250     0.075      2.00         4
+
+[HOOKS] Entering ROI
+[SNIPER] Enabling performance models
+[SNIPER] Setting instrumentation mode to DETAILED
+[TRACE:1] -- DONE --
+[TRACE:3] -- DONE --
+[TRACE:2] -- DONE --
+[SNIPER] Disabling performance models
+[SNIPER] Leaving ROI after 1140.98 seconds
+[SNIPER] Simulated 1780.4M instructions, 545.1M cycles, 3.27 IPC
+[SNIPER] Simulation speed 1560.4 KIPS (390.1 KIPS / target core - 2563.4ns/instr)
+[SNIPER] Sampling: executed 91.30% of simulated time in detailed mode
+[SNIPER] Setting instrumentation mode to FAST_FORWARD
+[TRACE:0] -- DONE --
+COMPUTESTART  =   2450576102
+[HOOKS] Leaving ROI
+COMPUTEEND    =   2450763898
+COMPUTETIME   =       187796
+TRACKTIME     =        91599
+PARTITIONTIME =          137	 0.00
+TREEBUILDTIME =         1881	 0.02
+FORCECALCTIME =        88363	 0.96
+RESTTIME      =         1218	 0.01
+[RECORD-TRACE] Using the Pin frontend (sift/recorder)
+                     Power     Energy    Energy %
+  core-core        11.57 W     2.17  J     23.81%
+  core-ifetch       2.67 W     0.50  J      5.49%
+  core-alu          1.41 W     0.27  J      2.91%
+  core-int          2.24 W     0.42  J      4.61%
+  core-fp           3.72 W     0.70  J      7.65%
+  core-mem          3.76 W     0.71  J      7.73%
+  core-other        3.79 W     0.71  J      7.81%
+  icache            1.72 W     0.32  J      3.54%
+  dcache            8.32 W     1.56  J     17.13%
+  l2                1.70 W     0.32  J      3.50%
+  l3                3.39 W     0.64  J      6.97%
+  dram              4.27 W     0.80  J      8.78%
+  other             0.03 W     6.14 mJ      0.07%
+
+  core             29.16 W     5.48  J     60.02%
+  cache            15.13 W     2.84  J     31.14%
+  total            48.59 W     9.13  J    100.00%
+[SNIPER] End
+[SNIPER] Elapsed time: 1172.42 seconds
+[SNIPER] Running McPAT
+[SPLASH] [----------    End of output    ----------]
+[SPLASH] Done.

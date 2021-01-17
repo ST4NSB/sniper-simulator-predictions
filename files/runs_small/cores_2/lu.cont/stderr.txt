@@ -1,0 +1,22 @@
+[SNIPER] Warning: Unable to use physical addresses for shared memory simulation.
+
+Ctrl-C detected: Killing all child processes
+Traceback (most recent call last):
+  File "/home/radu/sniper/record-trace", line 265, in <module>
+    pid, rc, usage = os.wait4(subproc.pid, 0)
+KeyboardInterrupt
+[SIFT_RECORDER] sift_writer.cc:538: uint64_t Sift::Writer::Syscall(uint16_t, const char*, uint32_t): Assertion `!response->fail()' failed.
+Traceback (most recent call last):
+  File "/home/radu/sniper/tools/mcpat.py", line 1304, in <module>
+    main(jobid = jobid, resultsdir = resultsdir, powertype = powertype, config = config, outputfile = outputfile, no_graph = no_graph, print_stack = not no_text, partial = partial)
+  File "/home/radu/sniper/tools/mcpat.py", line 130, in main
+    results = sniper_lib.get_results(jobid, resultsdir, partial = partial)
+  File "/home/radu/sniper/tools/sniper_lib.py", line 47, in get_results
+    results = parse_results_from_dir(resultsdir, partial = partial, metrics = metrics)
+  File "/home/radu/sniper/tools/sniper_lib.py", line 179, in parse_results_from_dir
+    results += stats.parse_stats((k1, k2), ncores, metrics = metrics)
+  File "/home/radu/sniper/tools/sniper_stats.py", line 7, in parse_stats
+    v1 = self.read_snapshot(k1, metrics = metrics)
+  File "/home/radu/sniper/tools/sniper_stats_sqlite.py", line 44, in read_snapshot
+    raise ValueError('Invalid prefix %s' % prefix)
+ValueError: Invalid prefix roi-begin

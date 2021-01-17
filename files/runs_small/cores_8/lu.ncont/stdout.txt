@@ -1,0 +1,67 @@
+[SPLASH] Benchmarks to run: lu.ncont
+
+[SPLASH] [========== Running benchmark lu.ncont ==========]
+[SPLASH] Setting up run directory: /tmp/tmpTeBDAX
+[SPLASH] Running 'SNIPER_APP_LD_PRELOAD=$LD_PRELOAD; unset LD_PRELOAD; /home/radu/sniper/run-sniper -n 1 -m 'localhost' -d '/home/radu/sniper/benchmarks/runz/cores_8/lu.ncont' -c gainestown --power --roi --curdir=/home/radu/sniper/benchmarks  --  /home/radu/sniper/benchmarks/splash2/splash2/codes/kernels/lu/non_contiguous_blocks/LU -n512 -p1':
+[SPLASH] [---------- Beginning of output ----------]
+[SNIPER] Start
+[SNIPER] --------------------------------------------------------------------------------
+[SNIPER] Sniper using SIFT/trace-driven frontend
+[SNIPER] Running pre-ROI region in  CACHE_ONLY mode
+[SNIPER] Running application ROI in DETAILED mode
+[SNIPER] Running post-ROI region in FAST_FORWARD mode
+[SNIPER] --------------------------------------------------------------------------------
+
+Blocked Dense LU Factorization
+     512 by 512 Matrix
+     1 Processors
+     16 by 16 Element Blocks
+
+
+[HOOKS] Entering ROI
+[SNIPER] Enabling performance models
+[SNIPER] Setting instrumentation mode to DETAILED
+[SNIPER] Disabling performance models
+[SNIPER] Leaving ROI after 366.58 seconds
+[SNIPER] Simulated 354.3M instructions, 177.9M cycles, 1.99 IPC
+[SNIPER] Simulation speed 966.6 KIPS (966.6 KIPS / target core - 1034.5ns/instr)
+[SNIPER] Sampling: executed 66.03% of simulated time in detailed mode
+[SNIPER] Setting instrumentation mode to FAST_FORWARD
+[TRACE:0] -- DONE --
+[HOOKS] Leaving ROI
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0         44160            91          2829         41238             1
+
+                            TIMING INFORMATION
+Start time                        :      -1844408241
+Initialization finish time        :      -1844385595
+Overall finish time               :      -1844341435
+Total time with initialization    :            66806
+Total time without initialization :            44160
+
+[RECORD-TRACE] Using the Pin frontend (sift/recorder)
+                     Power     Energy    Energy %
+  core-core         8.85 W     0.39  J     29.98%
+  core-ifetch       1.67 W     0.07  J      5.64%
+  core-alu          0.43 W     0.02  J      1.47%
+  core-int          1.26 W     0.06  J      4.26%
+  core-fp           1.17 W     0.05  J      3.96%
+  core-mem          1.85 W     0.08  J      6.27%
+  core-other        1.03 W     0.05  J      3.49%
+  icache            1.36 W     0.06  J      4.62%
+  dcache            3.73 W     0.17  J     12.62%
+  l2                0.49 W     0.02  J      1.66%
+  l3                3.41 W     0.15  J     11.55%
+  dram              4.25 W     0.19  J     14.40%
+  other             0.03 W     1.15 mJ      0.09%
+
+  core             16.26 W     0.72  J     55.06%
+  cache             8.99 W     0.40  J     30.45%
+  total            29.53 W     1.31  J    100.00%
+[SNIPER] End
+[SNIPER] Elapsed time: 375.97 seconds
+[SNIPER] Running McPAT
+[SPLASH] [----------    End of output    ----------]
+[SPLASH] Done.

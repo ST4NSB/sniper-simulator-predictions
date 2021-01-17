@@ -1,0 +1,73 @@
+[SPLASH] Benchmarks to run: ocean.ncont
+
+[SPLASH] [========== Running benchmark ocean.ncont ==========]
+[SPLASH] Setting up run directory: /tmp/tmpFjs0Yc
+[SPLASH] Running 'SNIPER_APP_LD_PRELOAD=$LD_PRELOAD; unset LD_PRELOAD; /home/radu/sniper/run-sniper -n 4 -m 'localhost' -d '/home/radu/sniper/benchmarks/runz/cores_4/ocean.ncont' -c gainestown --power --roi --curdir=/home/radu/sniper/benchmarks  --  /home/radu/sniper/benchmarks/splash2/splash2/codes/apps/ocean/non_contiguous_partitions/OCEAN -n258 -p4':
+[SPLASH] [---------- Beginning of output ----------]
+[SNIPER] Start
+[SNIPER] --------------------------------------------------------------------------------
+[SNIPER] Sniper using SIFT/trace-driven frontend
+[SNIPER] Running pre-ROI region in  CACHE_ONLY mode
+[SNIPER] Running application ROI in DETAILED mode
+[SNIPER] Running post-ROI region in FAST_FORWARD mode
+[SNIPER] --------------------------------------------------------------------------------
+
+Ocean simulation with W-cycle multigrid solver
+    Processors                         : 4
+    Grid size                          : 258 x 258
+    Grid resolution (meters)           : 20000.00
+    Time between relaxations (seconds) : 28800
+    Error tolerance                    : 1e-07
+
+[HOOKS] Entering ROI
+[SNIPER] Enabling performance models
+[SNIPER] Setting instrumentation mode to DETAILED
+[TRACE:2] -- DONE --
+[TRACE:3] -- DONE --
+[TRACE:1] -- DONE --
+[SNIPER] Disabling performance models
+[SNIPER] Leaving ROI after 419.56 seconds
+[SNIPER] Simulated 344.6M instructions, 148.2M cycles, 2.33 IPC
+[SNIPER] Simulation speed 821.4 KIPS (205.3 KIPS / target core - 4869.8ns/instr)
+[SNIPER] Sampling: executed 97.73% of simulated time in detailed mode
+[SNIPER] Setting instrumentation mode to FAST_FORWARD
+[HOOKS] Leaving ROI
+[TRACE:0] -- DONE --
+
+                       PROCESS STATISTICS
+                  Total          Multigrid         Multigrid
+ Proc             Time             Time            Fraction
+    0             35676               8081             0.227
+
+                       TIMING INFORMATION
+Start time                        :      -1844408241
+Initialization finish time        :      -1844388300
+Overall finish time               :      -1844352606
+Total time with initialization    :            55635
+Total time without initialization :            35694
+    (excludes first timestep)
+
+[RECORD-TRACE] Using the Pin frontend (sift/recorder)
+                     Power     Energy    Energy %
+  core-core         8.94 W     0.49  J     19.89%
+  core-ifetch       2.06 W     0.11  J      4.58%
+  core-alu          1.37 W     0.08  J      3.04%
+  core-int          1.70 W     0.09  J      3.77%
+  core-fp           4.06 W     0.22  J      9.04%
+  core-mem          1.77 W     0.10  J      3.94%
+  core-other        3.79 W     0.21  J      8.45%
+  icache            1.42 W     0.08  J      3.16%
+  dcache            4.43 W     0.24  J      9.87%
+  l2                1.83 W     0.10  J      4.06%
+  l3                3.86 W     0.21  J      8.58%
+  dram              9.68 W     0.53  J     21.54%
+  other             0.03 W     1.80 mJ      0.07%
+
+  core             23.69 W     1.30  J     52.71%
+  cache            11.54 W     0.64  J     25.68%
+  total            44.93 W     2.47  J    100.00%
+[SNIPER] End
+[SNIPER] Elapsed time: 423.03 seconds
+[SNIPER] Running McPAT
+[SPLASH] [----------    End of output    ----------]
+[SPLASH] Done.

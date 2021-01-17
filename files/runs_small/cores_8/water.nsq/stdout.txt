@@ -1,0 +1,97 @@
+[SPLASH] Benchmarks to run: water.nsq
+
+[SPLASH] [========== Running benchmark water.nsq ==========]
+[SPLASH] Setting up run directory: /tmp/tmp4vN6Wi
+[SPLASH] Running 'SNIPER_APP_LD_PRELOAD=$LD_PRELOAD; unset LD_PRELOAD; /home/radu/sniper/run-sniper -n 8 -m 'localhost' -d '/home/radu/sniper/benchmarks/runz/cores_8/water.nsq' -c gainestown --power --roi --curdir=/home/radu/sniper/benchmarks  --  /home/radu/sniper/benchmarks/splash2/splash2/codes/apps/water-nsquared/WATER-NSQUARED < input':
+[SPLASH] [---------- Beginning of output ----------]
+[SNIPER] Start
+[SNIPER] --------------------------------------------------------------------------------
+[SNIPER] Sniper using SIFT/trace-driven frontend
+[SNIPER] Running pre-ROI region in  CACHE_ONLY mode
+[SNIPER] Running application ROI in DETAILED mode
+[SNIPER] Running post-ROI region in FAST_FORWARD mode
+[SNIPER] --------------------------------------------------------------------------------
+Using 8 procs on 3 steps of 512 mols
+Other parameters:
+	TSTEP = 1.50e-16
+	NORDER = 6
+	NSAVE = -1
+	NRST = 3000
+	NPRINT = 3
+	NFMC = 0
+	CUTOFF = 6.212752
+
+
+TEMPERATURE                =   298.00 K
+DENSITY                    =  0.99800 G/C.C.
+NUMBER OF MOLECULES        =      512
+NUMBER OF PROCESSORS       =        8
+TIME STEP                  = 1.50e-01 SEC
+ORDER USED TO SOLVE F=MA   =        6 
+NO. OF TIME STEPS          =        3 
+FREQUENCY OF DATA SAVING   =       -1 
+FREQUENCY TO WRITE RST FILE=     3000 
+SPHERICAL CUTOFF RADIUS    =   6.2128 ANGSTROM
+
+NS = 7.9999899999999995
+BOXL =  24.851010
+CUTOFF =   6.212752
+XS =   3.106380
+ZERO = 1.55319
+WCOS = 0.585882
+WSIN = 0.756950
+***** NEW RUN STARTING FROM REGULAR LATTICE *****
+[HOOKS] Entering ROI
+[SNIPER] Enabling performance models
+[SNIPER] Setting instrumentation mode to DETAILED
+[TRACE:6] -- DONE --
+[TRACE:7] -- DONE --
+[TRACE:4] -- DONE --
+[TRACE:5] -- DONE --
+[TRACE:3] -- DONE --
+[TRACE:2] -- DONE --
+[TRACE:1] -- DONE --
+[SNIPER] Disabling performance models
+[SNIPER] Leaving ROI after 231.74 seconds
+[SNIPER] Simulated 436.7M instructions, 75.3M cycles, 5.80 IPC
+[SNIPER] Simulation speed 1884.5 KIPS (235.6 KIPS / target core - 4245.2ns/instr)
+[SNIPER] Sampling: executed 56.08% of simulated time in detailed mode
+[SNIPER] Setting instrumentation mode to FAST_FORWARD
+[TRACE:0] -- DONE --
+CREATETIME = 12
+         3        1.56363      0.05504     10.58529                      -2.17835
+           10.026        304.35093        -19.57001
+[HOOKS] Leaving ROI
+COMPUTESTART (after initialization) = 2450569955
+COMPUTEEND = 2450587285
+COMPUTETIME (after initialization) = 17330
+Measured Time (2nd timestep onward) = 10159
+Intramolecular time only (2nd timestep onward) = 132
+Intermolecular time only (2nd timestep onward) = 10011
+Other time (2nd timestep onward) = 16
+
+Exited Happily with XTT = 10.0256 (note: XTT value is garbage if NPRINT > NSTEP)
+[RECORD-TRACE] Using the Pin frontend (sift/recorder)
+                     Power     Energy    Energy %
+  core-core        29.47 W     0.51  J     27.56%
+  core-ifetch       6.44 W     0.11  J      6.03%
+  core-alu          2.77 W     0.05  J      2.59%
+  core-int          4.97 W     0.09  J      4.65%
+  core-fp           7.99 W     0.14  J      7.47%
+  core-mem          7.45 W     0.13  J      6.97%
+  core-other        7.59 W     0.13  J      7.10%
+  icache            4.19 W     0.07  J      3.92%
+  dcache           16.26 W     0.28  J     15.20%
+  l2                3.38 W     0.06  J      3.16%
+  l3                6.80 W     0.12  J      6.36%
+  dram              9.51 W     0.17  J      8.90%
+  other             0.11 W     1.86 mJ      0.10%
+
+  core             66.69 W     1.16  J     62.36%
+  cache            30.63 W     0.53  J     28.64%
+  total           106.93 W     1.86  J    100.00%
+[SNIPER] End
+[SNIPER] Elapsed time: 236.46 seconds
+[SNIPER] Running McPAT
+[SPLASH] [----------    End of output    ----------]
+[SPLASH] Done.

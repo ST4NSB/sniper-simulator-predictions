@@ -1,0 +1,1 @@
+[SNIPER] Warning: Unable to use physical addresses for shared memory simulation.

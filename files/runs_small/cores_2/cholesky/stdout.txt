@@ -1,0 +1,89 @@
+[SPLASH] Benchmarks to run: cholesky
+
+[SPLASH] [========== Running benchmark cholesky ==========]
+[SPLASH] Setting up run directory: /tmp/tmpS3nqFn
+[SPLASH] Extracting output: gunzip < /home/radu/sniper/benchmarks/splash2/splash2/codes/kernels/cholesky/inputs/tk25.O.Z > /tmp/tmpS3nqFn/tk25.O
+[SPLASH] Running 'SNIPER_APP_LD_PRELOAD=$LD_PRELOAD; unset LD_PRELOAD; /home/radu/sniper/run-sniper -n 2 -m 'localhost' -d '/home/radu/sniper/benchmarks/runz/cores_2/cholesky' -c gainestown --power --roi --curdir=/home/radu/sniper/benchmarks  --  /home/radu/sniper/benchmarks/splash2/splash2/codes/kernels/cholesky/CHOLESKY -p2 tk25.O':
+[SPLASH] [---------- Beginning of output ----------]
+[SNIPER] Start
+[SNIPER] --------------------------------------------------------------------------------
+[SNIPER] Sniper using SIFT/trace-driven frontend
+[SNIPER] Running pre-ROI region in  CACHE_ONLY mode
+[SNIPER] Running application ROI in DETAILED mode
+[SNIPER] Running post-ROI region in FAST_FORWARD mode
+[SNIPER] --------------------------------------------------------------------------------
+
+Sparse Cholesky Factorization
+     Problem:         
+     2 Processors
+     Postpass partition size: 32
+     16384 byte cache
+
+
+true partitions
+Fan-out, no block copy-across
+LB domain, embedded distribution
+No ordering
+7288 supers, 2.12 nodes/super, 179 max super
+7288/3401 supers before/after
+283747754/302038559 (1.06) ops before/after amalgamation
+before partition
+Divide for 2 P, 37 domains, 0.94 of work static, 1.00 eff, (inf overall)
+101890 total domain updates
+2221 max height, 302038559 ops, 45330.72 conc, 150.55 bl for 2 P
+Target partition size 0, postpass size 32
+Processor array is 2 by 1
+No redistribution
+Supers: 48: 1  331: 1  
+Blocks: 24: 2  33: 9  34: 1  
+12 partitions
+12 partitions, 132 blocks
+[HOOKS] Entering ROI
+[SNIPER] Enabling performance models
+[SNIPER] Setting instrumentation mode to DETAILED
+[TRACE:1] -- DONE --
+[SNIPER] Disabling performance models
+[SNIPER] Leaving ROI after 307.96 seconds
+[SNIPER] Simulated 477.1M instructions, 501.6M cycles, 0.95 IPC
+[SNIPER] Simulation speed 1549.2 KIPS (774.6 KIPS / target core - 1291.0ns/instr)
+[SNIPER] Sampling: executed 20.38% of simulated time in detailed mode
+[SNIPER] Setting instrumentation mode to FAST_FORWARD
+[TRACE:0] -- DONE --
+[HOOKS] Leaving ROI
+302038559 operations for factorization
+
+                            PROCESS STATISTICS
+              Total
+ Proc         Time 
+    0         37965
+                            TIMING INFORMATION
+Start time                        :      -1844408239
+Initialization finish time        :      -1844257773
+Overall finish time               :      -1844219808
+Total time with initialization    :           188431
+Total time without initialization :            37965
+
+[RECORD-TRACE] Using the Pin frontend (sift/recorder)
+                     Power     Energy    Energy %
+  core-core        16.40 W     0.63  J     34.79%
+  core-ifetch       2.61 W     0.10  J      5.54%
+  core-alu          1.28 W     0.05  J      2.71%
+  core-int          1.54 W     0.06  J      3.27%
+  core-fp           3.60 W     0.14  J      7.64%
+  core-mem          2.72 W     0.11  J      5.77%
+  core-other        1.98 W     0.08  J      4.20%
+  icache            1.40 W     0.05  J      2.97%
+  dcache            5.82 W     0.23  J     12.35%
+  l2                0.89 W     0.03  J      1.88%
+  l3                3.46 W     0.13  J      7.35%
+  dram              5.41 W     0.21  J     11.47%
+  other             0.03 W     1.03 mJ      0.06%
+
+  core             30.13 W     1.17  J     63.92%
+  cache            11.57 W     0.45  J     24.55%
+  total            47.13 W     1.82  J    100.00%
+[SNIPER] End
+[SNIPER] Elapsed time: 363.65 seconds
+[SNIPER] Running McPAT
+[SPLASH] [----------    End of output    ----------]
+[SPLASH] Done.

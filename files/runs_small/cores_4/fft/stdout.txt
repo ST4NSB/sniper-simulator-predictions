@@ -1,0 +1,74 @@
+[SPLASH] Benchmarks to run: fft
+
+[SPLASH] [========== Running benchmark fft ==========]
+[SPLASH] Setting up run directory: /tmp/tmpJmRXqQ
+[SPLASH] Running 'SNIPER_APP_LD_PRELOAD=$LD_PRELOAD; unset LD_PRELOAD; /home/radu/sniper/run-sniper -n 4 -m 'localhost' -d '/home/radu/sniper/benchmarks/runz/cores_4/fft' -c gainestown --power --roi --curdir=/home/radu/sniper/benchmarks  --  /home/radu/sniper/benchmarks/splash2/splash2/codes/kernels/fft/FFT -m18 -p4':
+[SPLASH] [---------- Beginning of output ----------]
+[SNIPER] Start
+[SNIPER] --------------------------------------------------------------------------------
+[SNIPER] Sniper using SIFT/trace-driven frontend
+[SNIPER] Running pre-ROI region in  CACHE_ONLY mode
+[SNIPER] Running application ROI in DETAILED mode
+[SNIPER] Running post-ROI region in FAST_FORWARD mode
+[SNIPER] --------------------------------------------------------------------------------
+
+FFT with Blocking Transpose
+   262144 Complex Doubles
+   4 Processors
+   65536 Cache lines
+   16 Byte line size
+   4096 Bytes per page
+
+[HOOKS] Entering ROI
+[SNIPER] Enabling performance models
+[SNIPER] Setting instrumentation mode to DETAILED
+[TRACE:1] -- DONE --
+[TRACE:3] -- DONE --
+[TRACE:2] -- DONE --
+[SNIPER] Disabling performance models
+[SNIPER] Leaving ROI after 104.69 seconds
+[SNIPER] Simulated 129.6M instructions, 286.0M cycles, 0.45 IPC
+[SNIPER] Simulation speed 1237.8 KIPS (309.5 KIPS / target core - 3231.4ns/instr)
+[SNIPER] Sampling: executed 8.20% of simulated time in detailed mode
+[SNIPER] Setting instrumentation mode to FAST_FORWARD
+[TRACE:0] -- DONE --
+[HOOKS] Leaving ROI
+
+                 PROCESS STATISTICS
+            Computation      Transpose     Transpose
+ Proc          Time            Time        Fraction
+    0              8855           3330       0.37606
+
+                 TIMING INFORMATION
+Start time                        :      -1844408241
+Initialization finish time        :      -1844309665
+Overall finish time               :      -1844300810
+Total time with initialization    :           107431
+Total time without initialization :             8855
+Overall transpose time            :             3330
+Overall transpose fraction        :          0.37606
+
+[RECORD-TRACE] Using the Pin frontend (sift/recorder)
+                     Power     Energy    Energy %
+  core-core        16.58 W     0.15  J     29.14%
+  core-ifetch       3.52 W     0.03  J      6.19%
+  core-alu          1.49 W     0.01  J      2.62%
+  core-int          2.59 W     0.02  J      4.55%
+  core-fp           4.15 W     0.04  J      7.29%
+  core-mem          2.64 W     0.02  J      4.63%
+  core-other        3.79 W     0.03  J      6.67%
+  icache            1.84 W     0.02  J      3.24%
+  dcache            5.91 W     0.05  J     10.38%
+  l2                1.72 W     0.02  J      3.02%
+  l3                3.55 W     0.03  J      6.23%
+  dram              9.10 W     0.08  J     15.98%
+  other             0.03 W     0.29 mJ      0.06%
+
+  core             34.77 W     0.31  J     61.09%
+  cache            13.02 W     0.12  J     22.87%
+  total            56.91 W     0.51  J    100.00%
+[SNIPER] End
+[SNIPER] Elapsed time: 132.58 seconds
+[SNIPER] Running McPAT
+[SPLASH] [----------    End of output    ----------]
+[SPLASH] Done.
